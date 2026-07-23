@@ -91,5 +91,5 @@ student.remove('department');
 // Hint: আজই Set শিখেছো। 😉
 var numberList = [10, 20, 10, 30, 40, 20, 50, 30];
 var numberSet = numberList.toSet();
-// print(numberSet);
+print(numberSet);
 }
