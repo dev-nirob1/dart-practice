@@ -109,3 +109,30 @@ class Employee {
 }
 const hasan = new Employee('Hasan', 'Frontend Developer', 40000, 3);
 // console.log(hasan.showInfo());
+
+// inheritace 
+class Vehicle {
+    constructor(brand, model, price){
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+    }
+    showDetails(){
+        return `Brand ${this.brand}, Model ${this.model}, Price: ${this.price}`
+    }
+}
+
+class Car extends Vehicle {
+    constructor(brand, model, price, fuelType){
+        super(brand, model, price)
+        this.fuelType = fuelType
+    }
+    drive(){
+        return `${this.brand} is driving with ${this.fuelType}`
+    }
+}
+const vehicle = new Vehicle('Toyota', 'Corolla', 200000)
+console.log(vehicle)
+// console.log(vehicle.showDetails())
+const car = new Car('Toyota', 'Corolla', 200000, 'Petrol')
+console.log(car.drive());
